@@ -1,0 +1,6 @@
+#mobileImage{
+    float: right;
+    display: inline-block;
+    border: 1px solid black;
+    filter: drop-shadow( 5px 15px 10px rgb(166, 164, 164));
+}
