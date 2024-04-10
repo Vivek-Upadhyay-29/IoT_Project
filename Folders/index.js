@@ -1,20 +1,12 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    
-    slides[slideIndex - 1].style.display = "block";
-}
+var x  = 10;
+a();
+b();
+console.log(x)
+function a(){
+    var x  = 12;
+    console.log(x);
+ }
+  function b(){
+    var x = 22;
+    console.log(x);
+  }

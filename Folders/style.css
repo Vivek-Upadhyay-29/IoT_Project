@@ -1,6 +1,26 @@
-#mobileImage{
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+.mobileImage {
     float: right;
     display: inline-block;
     border: 1px solid black;
-    filter: drop-shadow( 5px 15px 10px rgb(166, 164, 164));
+    filter: drop-shadow( 5px 15px 10px rgb(123, 121, 121));
+}
+
+
+.fs-4{
+    display:  flex;
+}
+
+.fs-4 span {
+    font-size: 50px;
+    margin-left: 30px;
+    font-family: "Anton", sans-serif;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 ;
 }
