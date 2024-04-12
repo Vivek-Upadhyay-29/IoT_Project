@@ -8,6 +8,16 @@ margin: 0;
  font-family: 'Titillium Web', sans-serif;
 
 }
+ ::-webkit-scrollbar{
+  width: 10px;;
+}
+ ::-webkit-scrollbar-track{
+  background-color: #081961db;
+  border-radius: 10px;
+}
+ ::-webkit-scrollbar-thumb{
+  background-color: rgb(77, 159, 197);
+}
 
 .header{
 
@@ -21,6 +31,19 @@ overflow: hidden;
 
 }
 
+#Introduction-Title{
+
+  border-radius: 15px;
+  background-color: #333;
+    color: #fff;
+    padding: 20px 0; /* Top and bottom padding */
+    text-align: center;
+    font-size: 2.5em;      
+    text-transform: uppercase;  
+}
+
+
+
 nav{
 
 display: flex;
@@ -30,6 +53,8 @@ align-items: center;
 
 
 }
+
+
 nav-img{
        width: 150px;
 
@@ -194,6 +219,7 @@ nav .fa{
 
 /* Uniqueness Part*/
 
+
 .featurette img {
   height: 300px;
   transition: transform 0.3s ease-in-out; /* Smooth transition effect */
@@ -299,7 +325,7 @@ font-weight:800;
 
 }
 p{
-  text-align: justify;
+text-align: justify;
 color: #383838;
 font-size: 24px;
 font-weight: 400;
@@ -328,6 +354,7 @@ box-sizing: border-box;
 transition: 0.5s;
 
 }
+
 h3{
 
 text-align: center;
@@ -629,13 +656,148 @@ padding: 18px 0;
 
 
 /*-------------about us page-------*/
+/*--Card */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body { background-color: #b4deac; margin: 0; font-family: 'Roboto Condensed', sans-serif;}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.card{
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.14);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.14);
+  box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.14);
+  margin: auto;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  height: 360px;
+  display: inline-block;
+  transform: scale(.9);
+  transition: all .3s;
+}
+
+.card:hover{
+  transform: scale(.95);
+}
+
+.card-top {
+  width: 100%;
+  height: 270px;
+  background-color: #f1f1f1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-top > img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.card-mid {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  overflow:hidden;
+  border-bottom-right-radius: 10px;
+  transition: all .3s;
+}
+.card-mid h4{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card-mid label{
+  margin: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: grey;
+}
+.card-image{
+  transition: all .3s;
+}
+.card:hover .card-image {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.card-desc {
+  transition: all .3s .2s;
+  border-left: 0px solid #b4deac;
+}
+.card:hover .card-desc {
+  border-left: 2px solid #b4deac;
+  padding-left: 8px;
+}
+.card-blur-zone {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 15px;
+  background-color: rgba(255, 255, 255, .8);
+
+}
+
+
+/*--Card */
+.footer{
+ justify-content: center;
+align-items: center; 
+ text-align: center;
+}
+.about-header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  animation: changeColor 5s infinite alternate; /* Animation */
+  border-radius: 20px;
+  margin: 0px 25px;
+  
+}
+
+/* Keyframe Animation */
+@keyframes changeColor {
+  0% {
+      background-color: #333;
+  }
+  50% {
+      background-color: #555;
+  }
+  100% {
+      background-color: #777;
+  }
+}
+
+.about-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  text-transform: uppercase;
+}
 
 
 .sub-header{
 
   height: 50vh;
    width: 100%;
-   background-image: linear-gradient(rgba(4, 9, 30,0.7),rgba(4, 9, 30,0.7)),url(images/background.jpg);
+      background-color: #060606;
+   background-image: linear-gradient(rgba(4, 9, 30,0.7),rgba(4, 9, 30,0.7)),url(imageS/IOT-1.jpg);
+
    background-position: center;
    background-size: cover;
    text-align: center;
