@@ -20,7 +20,8 @@ margin: 0;
 }
 
 .header{
-
+border-color:#3e20ff;
+opacity:1 ;
 min-height: 100vh;
 width: 100%;
 background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(./images/thief1.jpg);
@@ -34,13 +35,13 @@ overflow: hidden;
 #Introduction-Title{
 
   border-radius: 15px;
-  background-color: #333;
+  background-color: #0a033b;
     color: #fff;
     letter-spacing: 2px;
     font-weight: 700;
-    padding: 20px 0; /* Top and bottom padding */
+    padding: 25px 0; /* Top and bottom padding */
     text-align: center;
-    font-size: 2.5em;      
+    font-size: 2.8em;      
     text-transform: uppercase;  
 }
 
@@ -242,11 +243,12 @@ nav .fa{
 #p-title{
   
   border-radius: 15px;
-  background-color: #333;
+  background-color: #0a033b;
     color: #fff;
     padding: 20px 0; /* Top and bottom padding */
     text-align: center;
-    font-size: 2.5em;      
+    font-weight: 700;
+    font-size: 2.8em;      
     text-transform: uppercase;  
 }
 .mobileImage {
@@ -657,11 +659,11 @@ padding: 18px 0;
 }
 
 
-/*-------------about us page-------*/
+/*-------------about  #0a033b us page-------*/
 /*--Card */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-body { background-color: #b4deac; margin: 0; font-family: 'Roboto Condensed', sans-serif;}
+body { background-color: #a1d6f9; margin: 0; font-family: 'Roboto Condensed', sans-serif;}
 main {
   width: 100vw;
   height: 100vh;
@@ -693,7 +695,7 @@ main {
 .card-top {
   width: 100%;
   height: 270px;
-  background-color: #f1f1f1;
+  background-color: #c0e5fe;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -751,7 +753,7 @@ main {
   right: 0;
   left: 0;
   height: 15px;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 0.91);
 
 }
 
@@ -775,17 +777,26 @@ align-items: center;
   margin: 0px 25px;
   
 }
+.content div{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
 
+.main-content{
+
+}
 /* Keyframe Animation */
 @keyframes changeColor {
   0% {
-      background-color: #333;
+      background-color: #0a033b;
   }
   50% {
-      background-color: #555;
+      background-color: #0c0154;
   }
   100% {
-      background-color: #777;
+      background-color: #00348f;
   }
 }
 
@@ -800,7 +811,7 @@ align-items: center;
 
   height: 50vh;
    width: 100%;
-      background-color: #060606;
+  background-color: 0a033b;
    background-image: linear-gradient(rgba(4, 9, 30,0.7),rgba(4, 9, 30,0.7)),url(imageS/IOT-1.jpg);
 
    background-position: center;
