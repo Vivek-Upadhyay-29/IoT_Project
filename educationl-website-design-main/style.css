@@ -219,6 +219,7 @@ nav .fa{
 
 
 }
+/*  Team member cards */
 
 /* Uniqueness Part*/
 
@@ -302,7 +303,7 @@ nav .fa{
 /*-----course-----*/
 
 .course{
-
+background-color: whit;
     width: 80%;
     margin: auto;
     text-align: center;
@@ -329,6 +330,7 @@ font-weight:800;
 
 }
 p{
+ 
 text-align: justify;
 color: #383838;
 font-size: 24px;
@@ -350,7 +352,7 @@ justify-content: space-between;
 .course-col{
 
 
-background: #fff3f3;
+background: #ffffff;
 border-radius: 10px;
 margin-bottom: 5%;
 padding: 20px 12px;
@@ -438,7 +440,7 @@ transition: 0.5s;
 
 .layer:hover{
 
-background:rgba(226,0,0,0.7) ;
+background:rgba(42, 75, 240, 0.7) ;
 
 
 }
@@ -450,6 +452,7 @@ background:rgba(226,0,0,0.7) ;
 width: 100%;
 font-weight: 500;
 color: #fff;
+font-weight: 700;
 font-size: 26px;
 bottom: 0;
 left: 50%;
@@ -659,11 +662,11 @@ padding: 18px 0;
 }
 
 
-/*-------------about  #0a033b us page-------*/
+/*-------------about   DEVICE page-------*/
 /*--Card */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-body { background-color: #a1d6f9; margin: 0; font-family: 'Roboto Condensed', sans-serif;}
+body { background-color: #b5ddf7; margin: 0; font-family: 'Roboto Condensed', sans-serif;}
 main {
   width: 100vw;
   height: 100vh;
@@ -728,9 +731,10 @@ main {
   margin: 0;
   display: block;
   width: 100%;
+  font-weight: 900;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: grey;
+  color: rgb(70, 67, 67);
 }
 .card-image{
   transition: all .3s;
@@ -741,7 +745,7 @@ main {
 }
 .card-desc {
   transition: all .3s .2s;
-  border-left: 0px solid #b4deac;
+  border-left: 0px solid #d4d4d4;
 }
 .card:hover .card-desc {
   border-left: 2px solid #b4deac;
@@ -758,7 +762,7 @@ main {
 }
 
 
-/*--Card */
+/*--Header */
 #card-section{
   display: flex;
 }
@@ -784,9 +788,6 @@ align-items: center;
 height: 100vh;
 }
 
-.main-content{
-
-}
 /* Keyframe Animation */
 @keyframes changeColor {
   0% {
