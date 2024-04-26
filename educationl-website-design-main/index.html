@@ -21,7 +21,7 @@
     
 <li><a href="index.html">HOME</a></li>
 <li><a href="Device.html">DEVICE</a></li>
-<li><a href="Course.html">COURSE</a></li>
+<li><a href="Blog.html">BLOG</a></li>
 <li><a href="Contact.html">CONTACT</a></li>
 
 
@@ -63,19 +63,20 @@
 
 <!------course-->
 
+
 <section class="course">
     <div><p id="Introduction-Title">Why do we need Intruder safety Alarm</p></div>
 
 
+
 <div class="row">
+    
     <div class="course-col">
          <p style="padding: 10px 70px;">Your home is your safe place. Whether you’re there or not, you should feel secure in the fact that it’s protected from intruders and that the people you love are out of harm’s way. A home security system that has alarm monitoring, is the best way to keep your house safe.
 
-            In fact, according to a University of North Carolina report referenced by Angie’s List, about 83 percent of the burglars would try to find out if the home had a security alarm before attempting to break in, 50% of the burglars interviewed said they would stop breaking into the home if they found an intruder detection alarm, and an additional 31 percent said they might retreat. Only 13 percent said they would continue with the break-in if they found a security alarm.Feeling vulnerable in your own home?  This project empowers you to create a silent guardian – an IoT-based intruder alarm built with Arduino.  Forget noisy sirens that alert intruders. This system discreetly notifies you or the authorities when a breach occurs, allowing for a swift and silent response.  Imagine strategically placed sensors that detect movement, triggering an alert on your phone or sending a notification to designated contacts.  This project equips you to take back control, transforming your space into a safe haven without tipping off potential intruders.  Let's build peace of mind, one silent alarm at a time.</p>
-
+            In fact, according to a University of North Carolina report referenced by Angie’s List, about 83 percent of the burglars would try to find out if the home had a security alarm before attempting to break in, 50% of the burglars interviewed said they would stop breaking into the home if they found an intruder detection alarm, and an additional 31 percent said they might retreat. Only 13 percent said they would continue with the break-in if they found a security alarm.Feeling vulnerable in your own home?  This project empowers you to create a silent guardian – an IoT-based intruder alarm built with Arduino.  Forget noisy sirens that alert intruders. This system discreetly notifies you or the authorities when a breach occurs, allowing for a swift and silent response.  Imagine strategically placed sensors that detect movement, triggering an alert on your phone or sending a notification to designated contacts.  This project equips you to take back control, transforming your space into a safe haven without tipping off potential intruders.  Let's build peace of mind, one silent alarm at a time</p>
 
     
-
 
 
 </div>
@@ -83,6 +84,7 @@
 </section>
 
 <!------campus---->
+
 
 
 <section class="campus">
@@ -180,15 +182,84 @@
 
    </div>
 
+   
 
+   <div class="container-marketing" style=" filter: drop-shadow( 5px 10px 5px rgb(123, 121, 121));">
+
+    
+
+    <!-- Code  work -->
+
+   <p id="p-title">Final Program Code</p>
+
+    <hr class="featurette-divider">
+
+    <div class="pre.wp-block-code">
+      <div class="col-md-7">
+        <p class="lead"><strong> <pre class="wp-block-code">void setup() {
+            Serial.begin(9600);
+            Serial2.begin(9600);
+            delay(3000);
+            test_sim800_module();
+            send_SMS();
+          }
+          void loop() {
+            updateSerial();
+          }
+          void test_sim800_module()
+          {
+            Serial2.println("AT");
+            updateSerial();
+            Serial.println();
+            Serial2.println("AT+CSQ");
+            updateSerial();
+            Serial2.println("AT+CCID");
+            updateSerial();
+            Serial2.println("AT+CREG?");
+            updateSerial();
+            Serial2.println("ATI");
+            updateSerial();
+            Serial2.println("AT+CBC");
+            updateSerial();
+          }
+          void updateSerial()
+          {
+            delay(500);
+            while (Serial.available())
+            {
+              Serial2.write(Serial.read());//Forward what Serial received to Software Serial Port
+            }
+            while (Serial2.available())
+            {
+              Serial.write(Serial2.read());//Forward what Software Serial received to Serial Port
+            }
+          }
+          void send_SMS()
+          {
+            Serial2.println("AT+CMGF=1"); // Configuring TEXT mode
+            updateSerial();
+            Serial2.println("AT+CMGS=\"+919804049270\"");//change ZZ with country code and xxxxxxxxxxx with phone number to sms
+            updateSerial();
+            Serial2.print("Circuit Digest"); //text content
+            updateSerial();
+          Serial.println();
+            Serial.println("Message Sent");
+            Serial2.write(26);
+          }
+          </pre></strong></p>
+      </div>
+      <div class="siren-image">
+        <!-- <img src="./images/siren.jpg" alt="Description" style="height: 300px;"> -->
+      </div>
+    </div>
+
+    <!-- /END THE FEATURETTES -->
+
+   </div>
 
 
 
 <section>
-    
-    <div style="margin">
-
-    </div>
     <div class="no">
         <h1>OUR TEMMEMBER</h1>
     
@@ -253,7 +324,7 @@
 <!------------Footer-------->
 
 
-<section class="footer">
+<section class="footer" style="display: flex;">
 <h4>About Us</h4>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
    Reiciendis consequuntur   <br>  laboriosam ipsum aspernatur voluptatum alias praesentium odio molestiae, sequi consequatur.</p>

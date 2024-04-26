@@ -33,13 +33,16 @@ overflow: hidden;
 }
 
 #Introduction-Title{
-
+   display: flex;
   border-radius: 15px;
   background-color: #0a033b;
     color: #fff;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
     letter-spacing: 2px;
     font-weight: 700;
-    padding: 25px 0; /* Top and bottom padding */
+    padding: 20px 0; /* Top and bottom padding */
     text-align: center;
     font-size: 2.8em;      
     text-transform: uppercase;  
@@ -216,8 +219,37 @@ nav .fa{
      padding: 30px;
 
 }
+@media (max-width: 767px) {
+  .course-col {
+      padding: 10px;
+      
+
+  }
+  #Introduction-Title{
+      font-size: 1.4em;      
+      
+  }
+}
+
+}
 
 
+/* Code part */
+
+pre.wp-block-code {
+  background:white;
+  padding: 1em;
+  margin: .5em auto;
+  overflow: auto;
+  border: 10px solid  #0a033b;
+  border-radius: .3em;
+}
+pre.wp-block-code code {
+  color: black;
+  padding-left: 0;
+  border: none;
+  overflow-x: initial;
+  
 }
 /*  Team member cards */
 
