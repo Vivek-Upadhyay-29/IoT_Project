@@ -192,7 +192,10 @@
 
     <div class="pre.wp-block-code">
       <div class="col-md-7">
-        <p class="lead"><strong> <pre class="wp-block-code">void setup() {
+        
+        <p class="lead"><strong> <pre class="wp-block-code">
+          <div id="content">
+          void setup() {
             Serial.begin(9600);
             Serial2.begin(9600);
             delay(3000);
@@ -242,7 +245,10 @@
             Serial.println("Message Sent");
             Serial2.write(26);
           }
-          </pre></strong></p>
+        </div>
+        <button class="copy-btn" onclick="copyContent()">Copy</button>
+        <div class="copied-msg" id="copiedMsg">Copied!</div>
+      </pre></strong></p>
       </div>
       <div class="siren-image">
         <!-- <img src="./images/siren.jpg" alt="Description" style="height: 300px;"> -->
@@ -353,6 +359,6 @@
  
 </section>
 
-
+<script src="index.js"></script>
 </body>
 </html>

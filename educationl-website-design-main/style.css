@@ -251,6 +251,35 @@ pre.wp-block-code code {
   overflow-x: initial;
   
 }
+/* Copy button */
+#content{
+  margin: 0%;
+  padding: 0%;
+}
+.copy-btn{
+  margin: 0%;
+  padding: 0%;  
+}
+.copied-msg{
+  margin: 0%;
+  padding: 0%;  
+}
+   /* Style for the copy button */
+   .copy-btn {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+/* Style for the copied message */
+.copied-msg {
+    display: none;
+    color: #4CAF50;
+    font-size: 14px;
+}
 /*  Team member cards */
 
 /* Uniqueness Part*/

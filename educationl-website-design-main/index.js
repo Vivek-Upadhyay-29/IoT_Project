@@ -60,4 +60,30 @@ class YBCard {
   
   var card6 = new YBCard("card6", "Jumper Cables  ", "Jumper cables are short, insulated wires with male connectors at both ends, used to connect various components on an Arduino Uno board. <br/><br/>They facilitate the connection of sensors, modules, and other electronic components, allowing for flexible and easy prototyping", src="./images/cabels.png");
   card6.initCard();
-  
+  // Cop btn
+  function copyContent() {
+    // Get the content inside the div
+    var content = document.getElementById("content").innerText;
+
+    // Create a temporary textarea element
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = content;
+    document.body.appendChild(tempTextArea);
+
+    // Select the text within the textarea
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    // Copy the selected text
+    document.execCommand("copy");
+    
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
+    
+    // Show the "Copied!" message for a few seconds
+    var copiedMsg = document.getElementById("copiedMsg");
+    copiedMsg.style.display = "block";
+    setTimeout(function(){
+        copiedMsg.style.display = "none";
+    }, 1500); // Adjust the duration as needed
+}
