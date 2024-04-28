@@ -271,6 +271,8 @@ pre.wp-block-code code {
     color: white;
     padding: 8px 20px;
     border: none;
+    font-size: large;
+    font-weight:600;
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -278,7 +280,7 @@ pre.wp-block-code code {
 .copied-msg {
     display: none;
     color: #4CAF50;
-    font-size: 14px;
+    font-size: 20px;
 }
 /*  Team member cards */
 
@@ -693,6 +695,9 @@ font-size: 24px;
 width: 100%;
 text-align: center;
 padding: 30px 0;
+display: contents;
+text-align: center;
+justify-content: center;
 
 }
 
