@@ -6,53 +6,67 @@
     <title>Home Security</title>
     <link rel="stylesheet" href="Iot-Project/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
 <body>
     
 <section class="header">
-    <nav>
-        <a href="index.html"> <img src="./Iot-Project/images/bg-logo.png" style="height:100px" ></a>
-        <div class="naim" id="naim">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul> 
-                <li><a href="Iot-Project/index.html">HOME</a></li>
-                <li><a href="Iot-Project/Device.html">DEVICE</a></li>
-                <li><a href="Iot-Project/Blog.html">BLOG</a></li>
-                <li><a href="Iot-Project/Contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
-    <div class="text-box">
-        <h1>Home Security System with Intruder Detection and Automation</h1>
-        <p style="font-size: large;margin:15px; padding: 20px; text-align: center; font-size: 25px;">An intrusion alarm system is a system whose aim is to monitor and to detect unauthorized access to a building. These systems are used for different purposes and in different contexts both residential or commercial. The main purpose of an intrusion alarm system is to protect from burglary, vandalism, property damage, and, of course, the security of the individuals inside the building.</p>
-    </div>
+<nav>
+<a href=" index.html"> <img src="./Iot-Project/images/bg-logo.png" style="height:100px" ></a>
+<div class="naim" id="naim">
+    <i class="fa fa-times" onclick="hideMenu()" ></i>
+<ul> 
+<li><a href="Iot-Project/index.html">HOME</a></li>
+<li><a href="Iot-Project/Device.html">DEVICE</a></li>
+<li><a href="Iot-Project/Blog.html">BLOG</a></li>
+<li><a href="Iot-Project/Contact.html">CONTACT</a></li>
+
+
+</ul>
+
+
+</div>
+<i class="fa fa-bars" onclick="showMenu()" ></i>
+
+</nav>
+
+<div class="text-box">
+    <h1>Home Security System with Intruder Detection and Automation</h1>
+<p style="font-size: large;margin:15px; padding: 20px; text-align: center; font-size: 25px;">An intrusion alarm system is a system whose aim is to monitor and detect unauthorized access to a building. These systems are used for different purposes and in different contexts both residential or commercial. The main purpose of an intrusion alarm system is to protect from burglary, vandalism, property damage, and, of course, the security of the individuals inside the building.</p>
+</div>
 </section>
+
+<!------------Javascript for toggle menu-------->
 
 <script>
     var navlinks = document.getElementById("naim");
     function showMenu(){
-        naim.style.right="0";
+    
+    naim.style.right="0";
+    
     }
     function hideMenu(){
-        naim.style.right="-200px";
+    
+    naim.style.right="-200px";
+    
     }
-</script>
+    </script>
+    
+
+
+<!------INTRODUCTION-->
 
 <section class="course">
-    <div>
-        <p id="Introduction-Title">Why do we need Intruder safety Alarm</p>
+    <div><p id="Introduction-Title">Why do we need Intruder safety Alarm</p></div>
+     <div class="row">
+      <div class="course-col">
+         <p style="padding: 10px 70px;">Your home is your safe place. Whether you’re there or not, you should feel secure in the fact that it’s protected from intruders and that the people you love are out of harm’s way. A home security system that has alarm monitoring, is the best way to keep your house safe.
+            In fact, according to a University of North Carolina report referenced by Angie’s List, about 83 percent of the burglars would try to find out if the home had a security alarm before attempting to break in, 50% of the burglars interviewed said they would stop breaking into the home if they found an intruder detection alarm, and an additional 31 percent said they might retreat. Only 13 percent said they would continue with the break-in if they found a security alarm.Feeling vulnerable in your own home?  This project empowers you to create a silent guardian – an IoT-based intruder alarm built with Arduino.  Forget noisy sirens that alert intruders. This system discreetly notifies you or the authorities when a breach occurs, allowing for a swift and silent response.  Imagine strategically placed sensors that detect movement, triggering an alert on your phone or sending a notification to designated contacts.  This project equips you to take back control, transforming your space into a safe haven without tipping off potential intruders.  Let's build peace of mind, one silent alarm at a time.</p>
     </div>
-    <div class="row">
-        <div class="course-col">
-            <p style="padding: 10px 70px;">Your home is your safe place. Whether you’re there or not, you should feel secure in the fact that it’s protected from intruders and that the people you love are out of harm’s way. A home security system that has alarm monitoring, is the best way to keep your house safe. In fact, according to a University of North Carolina report referenced by Angie’s List, about 83 percent of the burglars would try to find out if the home had a security alarm before attempting to break in, 50% of the burglars interviewed said they would stop breaking into the home if they found an intruder detection alarm, and an additional 31 percent said they might retreat. Only 13 percent said they would continue with the break-in if they found a security alarm.Feeling vulnerable in your own home?  This project empowers you to create a silent guardian – an IoT-based intruder alarm built with Arduino.  Forget noisy sirens that alert intruders. This system discreetly notifies you or the authorities when a breach occurs, allowing for a swift and silent response.  Imagine strategically placed sensors that detect movement, triggering an alert on your phone or sending a notification to designated contacts.  This project equips you to take back control, transforming your space into a safe haven without tipping off potential intruders.  Let's build peace of mind, one silent alarm at a time.</p>
-        </div>
-    </div>
+</div>
 </section>
-
 
 <!------INTRODUCTION END-->
 
@@ -82,136 +96,124 @@
         </div>
     </div>
 </div>
-
-<section class="campus">
-    <p id="Introduction-Title">Major IoT devices Used</p> 
-    <div class="row">
-        <div class="campus-col">
-            <img src="Iot-Project/images/gsm-modoule.png" style="filter: drop-shadow(5px 15px 10px rgb(123, 121, 121));">
-            <div class="layer">
-                <h3>GSM-Module</h3>
-          </div>
-        </div>
-        <div class="campus-col">
-            <img src="Iot-Project/images/ardino-Img.png" style="filter: drop-shadow(5px 15px 10px rgb(123, 121, 121));">
-            <div class="layer">
-                <h3>Arduino UNO</h3>
-            </div>
-        </div>
-        <div class="campus-col">
-            <img src="Iot-Project/images/sonic.png" style="filter: drop-shadow(5px 15px 10px rgb(123, 121, 121));">
-            <div class="layer">
-                <h3>Ultra Sonic Sensor</h3>
-            </div>
-        </div>
-    </div>
-
 </section>
  
+<!------Major IOT Devices Section END---->
+
+<!-- UNIQUENESS-PART-START -->
+
 <div class="container-marketing">
-    <p id="p-title">Uniqueness</p>
-    <hr class="featurette-divider">
+   <p id="p-title">Uniqueness</p>
+   <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px; color:rgb(1, 1, 37)">Siren Activation</h2>
-            <p class="lead">Integrate a siren or loud buzzer that activates when motion is detected such as breach, like a door being opened or motion being sensed, and the system is armed and this can help detect intruders and alert nearby occupants or neighbors to the potential threat. If you're home during an intrusion, the siren's loud noise immediately notifies you of a potential threat. This allows you to take appropriate action, such as calling the police or hiding in a safe location.</p>
-        </div>
-        <div class="siren-image">
-            <img src="Iot-Project/images/siren.jpg" alt="Description" style="height: 300px;">
-        </div>
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px; color:rgb(1, 1, 37)">Siren Activation</h2>
+        <p class="lead">Integrate a siren or loud buzzer that activates when motion is detected  such as breach, like a door being opened or motion being sensed , and the system is armed and this can help detect intruders and alert nearby occupants or neighbors to the potential threat. 
+            If you're home during an intrusion, the siren's loud noise immediately notifies you of a potential threat. This allows you to take appropriate action, such as calling the police or hiding in a safe location.
+        </p>
+      </div>
+      <div class="siren-image">
+        <img src="Iot-Project/images/siren.jpg" alt="Description" style="height: 300px;">
+      </div>
     </div>
+
     <hr class="featurette-divider">
+
     <div class="row featurette">
         <div class="col-md-5 order-md-1">
-            <img id="camera-img" src="Iot-Project/images/Home-Security-Camera-1.png" sr alt="Description" style="height: 300px;">
+            <img id="camera-img"  src="Iot-Project/images/Home-Security-Camera-1.png" sr alt="Description" style="height: 300px;">
         </div>
-       
-
- <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Camera Integration </h2>
-            <p class="lead">Incorporate a camera module (such as a webcam or an IP camera) into the system to capture images or videos when motion is detected. We can then send these images or videos along with the notification to provide visual verification of the event.</p>
-        </div>
+        
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Camera Integration </h2>
+        <p class="lead">Incorporate a camera module (such as a webcam or an IP camera) into the system to capture images or videos when motion is detected. We can then send these images or videos along with the notification to provide visual verification of the event.
+        </p>
+      </div>
     </div>
+
     <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Remote Activation/Deactivation</h2>
-            <p class="lead">Implementing a feature that allows us to remotely arm and disarm the security system using SMS commands sent to the Arduino via the GSM module. This can be useful for enabling or disabling the system when you're away from home.</p>
-        </div>
-        <div class="col-md-5">
-            <div class="phoneimage"> 
-                <img src="Iot-Project/images/mobile.jpg" src alt="Description" style="height: 300px;">
-                <img class="mobileImage" src="./Iot-Project/images/ss.png" sr alt="Description" style="height: 150px; width: 300px">
-            </div>
-        </div>                  
-    </div>
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Remote Activation/Deactivation</h2>
+        <p class="lead">Implementing a feature that allows us to remotely arm and disarm the security system using SMS commands sent to the Arduino via the GSM module. This can be useful for enabling or disabling the system when you're away from home.
+</p>
+      </div>
+      <div class="col-md-5">
+        <div class="phoneimage"> 
+            <img   src="Iot-Project/images/mobile.jpg" src alt="Description" style="height: 300px;">
+            <img  class="mobileImage" src="./Iot-Project/images/ss.png" sr alt="Description" style="height: 150px; width: 300px">
+           </div>
+    </div>                  
+     </div>
+     <hr class="featurette-divider">
+     </div>
+    <!-- /END THE FEATURETTES -->
+    
+    <!-- Start of Code  Work -->
+
+  <div class="course-col" style="margin: 40px; filter: drop-shadow( 5px 10px 5px rgb(168, 168, 168));">
+   <p id="p-title">Final Program Code</p>
+
     <hr class="featurette-divider">
-</div>
- 
-<div class="course-col" style="margin: 40px; filter: drop-shadow(5px 10px 5px rgb(168, 168, 168));">
-    <p id="p-title">Final Program Code</p>
-    <hr class="featurette-divider">
+
     <div class="pre.wp-block-code">
-        <div class="col-md-7">
-            <p class="lead">
-                <strong>
-                    <pre class="wp-block-code">
-void setup() {
-  Serial.begin(9600);
-  Serial2.begin(9600);
-  delay(3000);
-  test_sim800_module();
-  send_SMS();
-}
-void loop() {
-  updateSerial();
-}
-void test_sim800_module()
-{
-  Serial2.println("AT");
-  updateSerial();
-  Serial.println();
-  Serial2.println("AT+CSQ");
-  updateSerial();
-  Serial2.println("AT+CCID");
-  updateSerial();
-  Serial2.println("AT+CREG?");
-  updateSerial();
-  Serial2.println("ATI");
-  updateSerial();
-  Serial2.println("AT+CBC");
-  updateSerial();
-}
-void updateSerial()
-{
-  delay(500);
-  while (Serial.available())
-  {
-    Serial2.write(Serial.read());//Forward what Serial received to Software Serial Port
-  }
-  while (Serial2.available())
-  {
-    Serial.write(Serial2.read());//Forward what Software Serial received to Serial Port
-  }
-}
-void send_SMS()
-{
-  Serial2.println("AT+CMGF=1"); // Configuring TEXT mode
-  updateSerial();
-  Serial2.println("AT+CMGS=\"+919804049270\"");//change ZZ with country code and xxxxxxxxxxx with phone number to sms
-  updateSerial();
-  Serial2.print("Circuit Digest"); //text content
-  updateSerial();
-  Serial.println();
-  Serial.println("Message Sent");
-  Serial2.write(26);
-}
-<button class="copy-btn" onclick="copyContent()">Copy</button>
-<div class="copied-msg" id="copiedMsg">Copied!</div>
-                    </pre>
-                </strong>
-            </p>
+      <div class="col-md-7">
+        
+        <p class="lead"><strong> <pre class="wp-block-code">
+          <div id="content">
+          void setup() {
+            Serial.begin(9600);
+            Serial2.begin(9600);
+            delay(3000);
+            test_sim800_module();
+            send_SMS();
+          }
+          void loop() {
+            updateSerial();
+          }
+          void test_sim800_module()
+          {
+            Serial2.println("AT");
+            updateSerial();
+            Serial.println();
+            Serial2.println("AT+CSQ");
+            updateSerial();
+            Serial2.println("AT+CCID");
+            updateSerial();
+            Serial2.println("AT+CREG?");
+            updateSerial();
+            Serial2.println("ATI");
+            updateSerial();
+            Serial2.println("AT+CBC");
+            updateSerial();
+          }
+          void updateSerial()
+          {
+            delay(500);
+            while (Serial.available())
+            {
+              Serial2.write(Serial.read());//Forward what Serial received to Software Serial Port
+            }
+            while (Serial2.available())
+            {
+              Serial.write(Serial2.read());//Forward what Software Serial received to Serial Port
+            }
+          }
+          void send_SMS()
+          {
+            Serial2.println("AT+CMGF=1"); // Configuring TEXT mode
+            updateSerial();
+            Serial2.println("AT+CMGS=\"+919804049270\"");//change ZZ with country code and xxxxxxxxxxx with phone number to sms
+            updateSerial();
+            Serial2.print("Circuit Digest"); //text content
+            updateSerial();
+          Serial.println();
+            Serial.println("Message Sent");
+            Serial2.write(26);
+          }
         </div>
+        <button class="copy-btn" onclick="copyContent()">Copy</button>
+        <div class="copied-msg" id="copiedMsg">Copied!</div>
       </pre></strong></p>
       </div>
       <div class="siren-image">
@@ -296,69 +298,9 @@ void send_SMS()
 <i class="fab fa-github"></i></div>
 <a href="https://github.com/Vivek-Upadhyay-29" >Github</a>
 
-=======
->>>>>>> 96b7a32fc18883f0c4480f2559025b9726ca2d82
     </div>
 </div>
- 
-<section class="pre.wp-block-code" style="margin: 40px 30px;">
-    <div class="course-col">
-        <div class="wp-block-code" style="background-color: white;border-radius:20px;">
-            <p id="p-title">Team Members</p>
-            <div class="row">
-                <div class="mentro-col">
-                    <img src="Iot-Project/images/1.png" alt="">
-                    <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Mehta Chandrashekhar </h2>
-                    <h2>210390107010</h2>
-                </div>
-                <div class="mentro-col">
-                    <img src="Iot-Project/images/2.png">
-                    <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Upadhyay Vivek </h2>
-                    <h2>210390107009</h2>
-                </div>
-                <div class="mentro-col">
-                    <div class="col-md-5">
-                        <img src="Iot-Project/images/3.png" alt="">
-                    </div>
-                    <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Singh Pritesh</h2>
-                    <h2>210390107008</h2>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
-
-<section class="footer">
-    <!-- <h4>About Us</h4>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequuntur laboriosam aspernatur voluptatum alias praesentium odio molestiae, sequi consequatur.</p> -->
-    <section class="by">
-        <div class="wrapper">
-            <div class="button">
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <span>Facebook</span>
-            </div>
-            <div class="button">
-                <div class="icon">
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <span>Twitter</span>
-            </div>
-            <div class="button">
-                <div class="icon">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <span>Instagram</span>
-            </div>
-            <div class="button">
-                <div class="icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <a href="https://github.com/Vivek-Upadhyay-29">Github</a>
-            </div>
-        </div>
-    </section>
 </section>
 
 <script src="Iot-Project/index.js"></script>
