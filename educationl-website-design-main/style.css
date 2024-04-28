@@ -42,7 +42,7 @@ overflow: hidden;
     line-height: normal;
     letter-spacing: 2px;
     font-weight: 700;
-    padding: 20px 0; /* Top and bottom padding */
+    padding: 15px 0; /* Top and bottom padding */
     text-align: center;
     font-size: 2.8em;      
     text-transform: uppercase;  
@@ -406,7 +406,7 @@ margin: 10px 0;
 }
 
 .course-col:hover{
-box-shadow: 0 0 20px 0px rgba(0,0,0,0.9);
+box-shadow: 0 0 20px 0px rgba(78, 78, 78, 0.9);
 
 
 }
