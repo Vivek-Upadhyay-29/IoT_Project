@@ -708,6 +708,10 @@ margin-top: 20px;
 font-weight: 600;
 
 }
+.footer-icon{
+  margin: 30px;
+}
+
 
 .icons .fas{
 
@@ -879,7 +883,7 @@ height: 100vh;
   height: 50vh;
    width: 100%;
   background-color: 0a033b;
-   background-image: linear-gradient(rgba(4, 9, 30,0.7),rgba(4, 9, 30,0.7)),url(imageS/IOT-1.jpg);
+   background-image: linear-gradient(rgba(4, 9, 30,0.7),rgba(4, 9, 30,0.7)),url(./images/IOT-1.jpg);
 
    background-position: center;
    background-size: cover;
