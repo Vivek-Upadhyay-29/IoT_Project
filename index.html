@@ -161,56 +161,84 @@
         
         <p class="lead"><strong> <pre class="wp-block-code">
           <div id="content">
-          void setup() {
-            Serial.begin(9600);
-            Serial2.begin(9600);
-            delay(3000);
-            test_sim800_module();
-            send_SMS();
-          }
-          void loop() {
-            updateSerial();
-          }
-          void test_sim800_module()
-          {
-            Serial2.println("AT");
-            updateSerial();
-            Serial.println();
-            Serial2.println("AT+CSQ");
-            updateSerial();
-            Serial2.println("AT+CCID");
-            updateSerial();
-            Serial2.println("AT+CREG?");
-            updateSerial();
-            Serial2.println("ATI");
-            updateSerial();
-            Serial2.println("AT+CBC");
-            updateSerial();
-          }
-          void updateSerial()
-          {
-            delay(500);
-            while (Serial.available())
-            {
-              Serial2.write(Serial.read());//Forward what Serial received to Software Serial Port
-            }
-            while (Serial2.available())
-            {
-              Serial.write(Serial2.read());//Forward what Software Serial received to Serial Port
-            }
-          }
-          void send_SMS()
-          {
-            Serial2.println("AT+CMGF=1"); // Configuring TEXT mode
-            updateSerial();
-            Serial2.println("AT+CMGS=\"+919804049270\"");//change ZZ with country code and xxxxxxxxxxx with phone number to sms
-            updateSerial();
-            Serial2.print("Circuit Digest"); //text content
-            updateSerial();
-          Serial.println();
-            Serial.println("Message Sent");
-            Serial2.write(26);
-          }
+            #include <SoftwareSerial.h>
+
+              //Alarm reciever's phone number with country code
+              const String PHONE = "+91 ##########";
+              
+              //GSM Module RX pin to Arduino 3
+              //GSM Module TX pin to Arduino 2
+              #define rxPin 2
+              #define txPin 3
+              SoftwareSerial sim800l(rxPin,txPin);
+              
+              //the pin that the pir sensor is atteched to
+              int pir_sensor = 11;
+              int led = 13;
+              
+              void setup() {
+                pinMode(led, OUTPUT); // LED OUTPUT
+              
+                pinMode(pir_sensor, INPUT);    // initialize sensor as an input
+                Serial.begin(115200);          // initialize serial
+              
+                sim800l.begin(9600);
+                Serial.println("sim800lL software serial initialize");
+              
+                sim800l.println("AT");
+                delay(1000);
+              }
+              
+              void loop(){
+              
+              //////////////////////////////////////////////////
+              while(sim800l.available()){
+                Serial.println(sim800l.readString());
+              }
+              //////////////////////////////////////////////////
+              while(Serial.available())  {
+                sim800l.println(Serial.readString());
+              }
+              //////////////////////////////////////////////////
+                int val = digitalRead(pir_sensor);  // read sensor value
+                if (val == HIGH) {                  // check if the sensor is HIGH
+                  //state = HIGH;
+              
+                  digitalWrite(led, HIGH);
+              
+                  
+                  Serial.println("Motion detected!");
+                  Serial.println("sending message");
+                  SendSMS();
+                  delay(4000);
+                  Serial.println("calling....");
+                  delay(1000);
+                  sim800l.println("ATD"+PHONE+";");
+                  delay(20000); //20 sec delay
+                }
+                else{
+                  digitalWrite(led, LOW);
+                  Serial.println("not detectd any motion");
+                  delay(1000);
+                }
+              }
+              
+              void SendSMS()
+              {
+                Serial.println("Sending SMS...");               //Show this message on serial monitor
+                sim800l.print("AT+CMGF=1\r");                   //Set the module to SMS mode
+                delay(100);
+                sim800l.print("AT+CMGS=\"+916354627482\"\r");  //Your phone number don't forget to include your country code, example +212123456789"
+                delay(500);
+                sim800l.print("Security Alert.....!!!!!!! Some one entered in the house ");       //This is the text to send to the phone number, don't make it too long or you have to modify the SoftwareSerial buffer
+                delay(500);
+                sim800l.print((char)26);// (required according to the datasheet)
+                delay(500);
+                sim800l.println();
+                Serial.println("Text Sent.");
+                delay(500);
+              
+              }
         </div>
         <button class="copy-btn" onclick="copyContent()">Copy</button>
         <div class="copied-msg" id="copiedMsg">Copied!</div>
@@ -236,15 +264,7 @@
           <h2 class="featurette-heading fw-normal lh-1" style="font-size: 40px;  color:rgb(1, 1, 37)">Mehta Chandrashekhar </h2>
           <h2>210390107010</h2>
         </div>
-    <!-- <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    
-         <p>Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit. Reprehenderit, deserunt.</p>
-         <button class="hero-btn red-btn">Call Now</button>
-     -->
+
    
           <div class="mentro-col">
             <img src="Iot-Project/images/2.png" ">
