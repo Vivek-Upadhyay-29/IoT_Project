@@ -56,7 +56,7 @@ card3.initCard();
 var card4 = new YBCard("card4", "Step Down Converter  ", " A step-down converter reduces a higher input voltage to a lower output voltage while maintaining consistent power. Commonly used in electronics,<br/><br/>  it can convert a 12V input to a 5V output, ensuring efficient operation and safety in battery-powered devices.", src="./images/converter.png");
 card4.initCard();
 
-var card5 = new YBCard("card5", "Rechargeable Batteries", "Rechargeable batteries are energy storage devices that can be recharged and reused multiple times. </br></br>They are commonly used in electronics and come in various sizes, such as AA and AAA, providing a sustainable power source for devices like smartphones and laptops.", src="./images/batteries.png" );
+var card5 = new YBCard("card5", "12v Adapter ", "It is used to supply a power to our Arduino uno which further sends DC voltage to PIR motion sensor and Gsm Sim800L </br></br>These adapters are commonly used to power various electronic devices such as routers, modems, LED light strips, CCTV cameras, and car accessories like portable refrigerators or chargers.", src="./images/charger.png" );
 card5.initCard();
 
 var card6 = new YBCard("card6", "Jumper Cables  ", "Jumper cables are short, insulated wires with male connectors at both ends, used to connect various components on an Arduino Uno board. <br/><br/>They facilitate the connection of sensors, modules, and other electronic components, allowing for flexible and easy prototyping", src="./images/cabels.png");
